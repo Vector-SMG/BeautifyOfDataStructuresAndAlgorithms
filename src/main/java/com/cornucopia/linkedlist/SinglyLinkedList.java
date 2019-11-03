@@ -11,25 +11,18 @@ import com.cornucopia.linkedlist.bean.Node;
  */
 public class SinglyLinkedList<T> {
 
-    //默认的容量
-    private static final int DEFAULT_CAPACITY = 10;
+
     //长度
     private int length;
-    //容量
-    private int capacity;
     //头节点
     private Node<T> head;
+    //尾节点
     private Node<T> tail;
 
 
     public SinglyLinkedList() {
-        this.capacity = DEFAULT_CAPACITY;
-    }
 
-    public SinglyLinkedList(int capacity) {
-        this.capacity = capacity;
     }
-
 
     /**
      * 增加元素
@@ -40,6 +33,12 @@ public class SinglyLinkedList<T> {
         add(length, data);
     }
 
+    /**
+     * 在index位置添加一个新元素
+     *
+     * @param index 元素下标
+     * @param data  元素数据
+     */
     public void add(int index, T data) {
         if (index == 0) {
             addFirst(data);
