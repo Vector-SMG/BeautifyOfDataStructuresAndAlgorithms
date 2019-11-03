@@ -3,7 +3,8 @@ package com.cornucopia.array;
 import java.util.Arrays;
 
 /**
- * 探讨ArrayList基本的线性表封装，扩容等
+ * 1.支持动态扩容的线性表
+ *
  *
  * @author cornucopia
  * @version 1.0
