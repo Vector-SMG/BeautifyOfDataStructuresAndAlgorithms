@@ -11,7 +11,6 @@ import com.cornucopia.linkedlist.bean.Node;
  */
 public class SinglyLinkedList<T> {
 
-
     //长度
     private int length;
     //头节点
@@ -33,6 +32,7 @@ public class SinglyLinkedList<T> {
         add(length, data);
     }
 
+
     /**
      * 在index位置添加一个新元素
      *
@@ -46,12 +46,11 @@ public class SinglyLinkedList<T> {
             addLast(data);
         } else {
             Node<T> tmp = findPreNodeByIndex(index);
-            if (tmp == null) {
-                throw new IllegalArgumentException("index必须大于0小于等于" + length);
+            if(tmp!=null) {
+                Node<T> newNode = new Node<T>(data, tmp.getNext());
+                tmp.setNext(newNode);
+                length++;
             }
-            Node<T> newNode = new Node<T>(data, tmp.getNext());
-            tmp.setNext(newNode);
-            length++;
         }
     }
 
@@ -128,7 +127,59 @@ public class SinglyLinkedList<T> {
                 tmp = tmp.getNext();
             }
         }
+    }
 
+
+    /**
+     * 删除数据对应的元素。todo 后续添加该方法
+     *
+     * @param data
+     */
+    public void delete(T data) {
+    }
+
+
+    /**
+     * 删除index元素
+     *
+     * @param index
+     */
+    public void delete(int index) {
+        if (index == 0) {
+            deleteFirst();
+        } else if (index >= (length - 1)) {
+            deleteLast();
+        } else {
+            Node<T> preNode = findPreNodeByIndex(index);
+            if(preNode!=null){
+                preNode.setNext(preNode.getNext().getNext());
+                length--;
+            }
+        }
+    }
+
+
+    /**
+     * 删除首节点
+     */
+    public void deleteFirst() {
+        if (head != null) {
+            head = head.getNext();
+            length--;
+        }
+    }
+
+
+    /**
+     * 删除尾节点
+     */
+    public void deleteLast() {
+        if (tail != null) {
+            Node<T> preNodeOfLast = findPreNodeByIndex(length - 1);
+            preNodeOfLast.setNext(null);
+            tail = preNodeOfLast;
+            length--;
+        }
     }
 
 
