@@ -4,6 +4,8 @@ import com.cornucopia.linkedlist.bean.Node;
 
 /**
  * 单链表
+ * | data | next |  ---  | data | next | --- | data | null |
+ *
  *
  * @author cornucopia
  * @version 1.0
@@ -46,7 +48,7 @@ public class SinglyLinkedList<T> {
             addLast(data);
         } else {
             Node<T> tmp = findPreNodeByIndex(index);
-            if(tmp!=null) {
+            if (tmp != null) {
                 Node<T> newNode = new Node<T>(data, tmp.getNext());
                 tmp.setNext(newNode);
                 length++;
@@ -151,7 +153,7 @@ public class SinglyLinkedList<T> {
             deleteLast();
         } else {
             Node<T> preNode = findPreNodeByIndex(index);
-            if(preNode!=null){
+            if (preNode != null) {
                 preNode.setNext(preNode.getNext().getNext());
                 length--;
             }
