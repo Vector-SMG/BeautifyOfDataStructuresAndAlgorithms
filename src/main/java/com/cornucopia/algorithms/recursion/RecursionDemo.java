@@ -1,7 +1,6 @@
-package com.curcopia.algorithms.recursion;
+package com.cornucopia.algorithms.recursion;
 
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
