@@ -1,0 +1,52 @@
+package com.curcopia.sort;
+
+import com.cornucopia.algorithms.sort.BubbleSort;
+import com.cornucopia.algorithms.sort.ISort;
+import com.cornucopia.algorithms.sort.InsertionSort;
+import org.junit.Test;
+
+/**
+ * 排序测试.
+ *
+ * @author cornucopia
+ * @version 1.0
+ * @since 2019-11-05
+ */
+public class SortTest {
+
+    @Test
+    public void sort() {
+        int a[] = {1, 3, 2, 8, 5, 4, 0};
+//        printElementOfSort(new BubbleSort(),a,a.length);
+        printElementOfSort(new InsertionSort(),a,a.length);
+    }
+
+
+    /**
+     *
+     * @param sort
+     * @param a
+     * @param length
+     */
+    private void printElementOfSort(ISort sort, int a[], int length) {
+        System.out.println("排序前:");
+        print(a,length);
+        sort.sort(a, length);
+        System.out.println("\n排序后:");
+        print(a,length);
+    }
+
+
+    /**
+     * 打印数组元素
+     * @param a
+     * @param length
+     */
+    private void print(int a[], int length) {
+        for (int i : a) {
+            System.out.print(i+" ");
+        }
+    }
+
+
+}
