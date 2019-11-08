@@ -3,6 +3,7 @@ package com.curcopia.sort;
 import com.cornucopia.algorithms.sort.BubbleSort;
 import com.cornucopia.algorithms.sort.ISort;
 import com.cornucopia.algorithms.sort.InsertionSort;
+import com.cornucopia.algorithms.sort.SectionSort;
 import org.junit.Test;
 
 /**
@@ -16,35 +17,36 @@ public class SortTest {
 
     @Test
     public void sort() {
-        int a[] = {1, 3, 2, 8, 5, 4, 0};
+        int a[] = {0, 1, 2, 3, 4, -100, -10};
 //        printElementOfSort(new BubbleSort(),a,a.length);
-        printElementOfSort(new InsertionSort(),a,a.length);
+//        printElementOfSort(new InsertionSort(),a,a.length);
+        printElementOfSort(new SectionSort(), a, a.length);
     }
 
 
     /**
-     *
      * @param sort
      * @param a
      * @param length
      */
     private void printElementOfSort(ISort sort, int a[], int length) {
         System.out.println("排序前:");
-        print(a,length);
+        print(a, length);
         sort.sort(a, length);
         System.out.println("\n排序后:");
-        print(a,length);
+        print(a, length);
     }
 
 
     /**
      * 打印数组元素
+     *
      * @param a
      * @param length
      */
     private void print(int a[], int length) {
         for (int i : a) {
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
     }
 

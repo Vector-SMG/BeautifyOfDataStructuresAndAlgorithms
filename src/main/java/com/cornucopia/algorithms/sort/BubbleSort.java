@@ -45,6 +45,7 @@ public class BubbleSort implements ISort {
             return;
         }
         for (int i = 0; i < n; i++) {
+            //避免重复计算，一旦发现元素没有进行交换位置，那么认定已经排好序
             boolean flag = false;
             for (int j = 0; j < n - i - 1; ++j) {
                 if (a[j] > a[j + 1]) {
