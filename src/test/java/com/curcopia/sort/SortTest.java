@@ -1,9 +1,8 @@
 package com.curcopia.sort;
 
-import com.cornucopia.algorithms.sort.BubbleSort;
 import com.cornucopia.algorithms.sort.ISort;
-import com.cornucopia.algorithms.sort.InsertionSort;
-import com.cornucopia.algorithms.sort.SectionSort;
+import com.cornucopia.algorithms.sort.MergeSort;
+import com.cornucopia.algorithms.sort.QuickSort;
 import org.junit.Test;
 
 /**
@@ -17,10 +16,12 @@ public class SortTest {
 
     @Test
     public void sort() {
-        int a[] = {0, 1, 2, 3, 4, -100, -10};
-//        printElementOfSort(new BubbleSort(),a,a.length);
-//        printElementOfSort(new InsertionSort(),a,a.length);
-        printElementOfSort(new SectionSort(), a, a.length);
+        int a[] = {0, 1, 2, 3, 4, -100, -10,123,23,11,12,56,20};
+//      printElementOfSort(new BubbleSort(),a,a.length);
+//      printElementOfSort(new InsertionSort(),a,a.length);
+//      printElementOfSort(new SectionSort(), a, a.length);
+//        printElementOfSort(new MergeSort(), a, a.length);
+        printElementOfSort(new QuickSort(), a, a.length);
     }
 
 
