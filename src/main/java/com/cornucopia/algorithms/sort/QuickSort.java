@@ -1,5 +1,7 @@
 package com.cornucopia.algorithms.sort;
 
+import com.cornucopia.algorithms.sort.utils.SortUtils;
+
 /**
  * 快速排序
  * 1.原理:如果排序的数组中下标从p到r之间的一组数据，我们选择p到r之间的任意一个数据作为pivot(分区点).遍历p到r之间的数据
@@ -34,29 +36,11 @@ public class QuickSort implements ISort {
      */
     private void quickSort(int[] a, int start, int end) {
         if (start >= end) return;
-
-        int pivot = parition(a, start, end);
+        int pivot = SortUtils.parition(a, start, end);
         quickSort(a, start, pivot - 1);
         quickSort(a, pivot + 1, end);
     }
 
-    private int parition(int[] a, int start, int end) {
-        int pivot = a[end];
-        int i = start;
-        int j = start;
-        for (; j < end+1; j++) {
-            if (a[j] < pivot) {
-                int tmp = a[j];
-                a[j] = a[i];
-                a[i] = tmp;
-                i++;
-            }
-        }
-        int tmp = a[i];
-        a[i] = a[end];
-        a[end] = tmp;
-        return i;
-    }
 
 
 }

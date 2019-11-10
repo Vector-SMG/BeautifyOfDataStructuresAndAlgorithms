@@ -1,7 +1,7 @@
 package com.curcopia.sort;
 
+import com.cornucopia.algorithms.sort.FindKOfArray;
 import com.cornucopia.algorithms.sort.ISort;
-import com.cornucopia.algorithms.sort.MergeSort;
 import com.cornucopia.algorithms.sort.QuickSort;
 import org.junit.Test;
 
@@ -16,12 +16,12 @@ public class SortTest {
 
     @Test
     public void sort() {
-        int a[] = {0, 1, 2, 3, 4, -100, -10,123,23,11,12,56,20};
+        int a[] = {0, 1, 2, 3, 4, -100, -10, 123, 23, 11, 12, 56, 20};
 //      printElementOfSort(new BubbleSort(),a,a.length);
 //      printElementOfSort(new InsertionSort(),a,a.length);
 //      printElementOfSort(new SectionSort(), a, a.length);
-//        printElementOfSort(new MergeSort(), a, a.length);
-        printElementOfSort(new QuickSort(), a, a.length);
+//      printElementOfSort(new MergeSort(), a, a.length);
+//      printElementOfSort(new QuickSort(), a, a.length);
     }
 
 
@@ -49,6 +49,16 @@ public class SortTest {
         for (int i : a) {
             System.out.print(i + " ");
         }
+    }
+
+
+    @Test
+    public void testFindK() {
+        int a[] = {0, 1, 2, 3, 4, -100, -10, 123, 23, 11, 12, 56, 20};
+        int k = 2;
+        FindKOfArray findKOfArray = new FindKOfArray();
+        int result = findKOfArray.find(a, a.length, k);
+        System.out.println("数组第" + k + "大的数据是:" + result);
     }
 
 
