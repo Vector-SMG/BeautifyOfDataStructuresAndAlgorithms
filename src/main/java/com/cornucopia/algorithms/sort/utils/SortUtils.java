@@ -1,6 +1,10 @@
 package com.cornucopia.algorithms.sort.utils;
 
 /**
+ *
+ * todo 20191112 研究TimSort,以及Arrays.sort()
+ *
+ *
  * @author cornucopia
  * @version 1.0
  * @since 2019-11-10
@@ -11,7 +15,7 @@ public class SortUtils {
     /**
      * 分区方法，来自快排
      * 将最后一个元素当做分区点，并且使用游标i,j都指向start位置的元素，并将j往后移动，比较a[i]和pivot分区大小，如果a[i]<pivot，则
-     * 将a[i]和a[j]交换。最后，将a[i]和a[end]交换。最终将pivot移动到中间位置
+     * 将a[i]和a[j]交换，i++。最后，将a[i]和a[end]交换。最终将pivot移动到中间位置。
      *
      * @param a
      * @param start
