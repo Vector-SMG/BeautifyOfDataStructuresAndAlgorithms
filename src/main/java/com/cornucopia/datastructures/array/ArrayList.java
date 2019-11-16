@@ -1,4 +1,4 @@
-package com.cornucopia.array;
+package com.cornucopia.datastructures.array;
 
 import java.util.Arrays;
 

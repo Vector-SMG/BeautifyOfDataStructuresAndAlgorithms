@@ -1,4 +1,4 @@
-package com.cornucopia.linkedlist.bean;
+package com.cornucopia.datastructures.linkedlist.bean;
 
 /**
  * 节点

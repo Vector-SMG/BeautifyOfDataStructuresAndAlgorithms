@@ -1,6 +1,6 @@
 package com.curcopia.array;
 
-import com.cornucopia.array.ArrayList;
+import com.cornucopia.datastructures.array.ArrayList;
 import org.junit.Test;
 
 /**

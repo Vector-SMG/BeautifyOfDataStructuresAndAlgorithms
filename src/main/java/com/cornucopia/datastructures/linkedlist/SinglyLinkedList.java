@@ -1,6 +1,6 @@
-package com.cornucopia.linkedlist;
+package com.cornucopia.datastructures.linkedlist;
 
-import com.cornucopia.linkedlist.bean.Node;
+import com.cornucopia.datastructures.linkedlist.bean.Node;
 
 /**
  * 单链表

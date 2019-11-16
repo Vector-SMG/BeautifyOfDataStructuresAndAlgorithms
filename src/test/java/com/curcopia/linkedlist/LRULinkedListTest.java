@@ -1,6 +1,6 @@
 package com.curcopia.linkedlist;
 
-import com.cornucopia.linkedlist.LRULinkedList;
+import com.cornucopia.datastructures.linkedlist.LRULinkedList;
 import org.junit.Test;
 
 /**
